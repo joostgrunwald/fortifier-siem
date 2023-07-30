@@ -1,5 +1,5 @@
-$globalip = "77.167.67.119"
-Invoke-WebRequest -Uri https://packages.wazuh.com/4.x/windows/wazuh-agent-4.4.5-1.msi -OutFile ${env:tmp}\wazuh-agent.msi; msiexec.exe /i ${env:tmp}\wazuh-agent.msi /q WAZUH_MANAGER=$globalip WAZUH_REGISTRATION_SERVER='192.168.2.7' WAZUH_REGISTRATION_PASSWORD='nuwelijnsiemagent' WAZUH_AGENT_GROUP='Windows' 
+$globalip = "{globaliphere}"
+Invoke-WebRequest -Uri https://packages.wazuh.com/4.x/windows/wazuh-agent-4.4.5-1.msi -OutFile ${env:tmp}\wazuh-agent.msi; msiexec.exe /i ${env:tmp}\wazuh-agent.msi /q WAZUH_MANAGER=$globalip WAZUH_REGISTRATION_SERVER='192.168.2.7' WAZUH_REGISTRATION_PASSWORD='{passhere}' WAZUH_AGENT_GROUP='Windows' 
 $sysinternals_repo = 'download.sysinternals.com'
 $sysinternals_downloadlink = 'https://download.sysinternals.com/files/SysinternalsSuite.zip'
 $sysinternals_folder = 'C:\Program Files\sysinternals'
