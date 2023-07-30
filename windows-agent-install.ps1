@@ -1,5 +1,5 @@
-$globalip = "{globaliphere}"
-Invoke-WebRequest -Uri https://packages.wazuh.com/4.x/windows/wazuh-agent-4.4.5-1.msi -OutFile ${env:tmp}\wazuh-agent.msi; msiexec.exe /i ${env:tmp}\wazuh-agent.msi /q WAZUH_MANAGER=$globalip WAZUH_REGISTRATION_SERVER='192.168.2.7' WAZUH_REGISTRATION_PASSWORD='{passhere}' WAZUH_AGENT_GROUP='Windows' 
+$globalip = "77.167.67.119"
+Invoke-WebRequest -Uri https://packages.wazuh.com/4.x/windows/wazuh-agent-4.4.5-1.msi -OutFile ${env:tmp}\wazuh-agent.msi; msiexec.exe /i ${env:tmp}\wazuh-agent.msi /q WAZUH_MANAGER=$globalip WAZUH_REGISTRATION_SERVER='192.168.2.7' WAZUH_REGISTRATION_PASSWORD='nuwelijnsiemagent' WAZUH_AGENT_GROUP='Windows' 
 $sysinternals_repo = 'download.sysinternals.com'
 $sysinternals_downloadlink = 'https://download.sysinternals.com/files/SysinternalsSuite.zip'
 $sysinternals_folder = 'C:\Program Files\sysinternals'
@@ -230,3 +230,14 @@ Function InstallHardeningKitty() {
     Import-Module "$Env:ProgramFiles\WindowsPowerShell\Modules\HardeningKitty\$Version\HardeningKitty.psm1"
 }
 InstallHardeningKitty
+
+# STEP 6: Automatically harden windows endpoint
+
+# Get the url from my github to get the hardening.csv
+$URL = 'https://raw.githubusercontent.com/joostgrunwald/fortifier-siem/main/hardening.csv'  
+
+# Download the hardening file and save it to the folder where hardeningkitty resides
+Invoke-WebRequest -Uri $URL -OutFile (Join-Path -Path "$Env:ProgramFiles\WindowsPowerShell\Modules\HardeningKitty\$Version\" -ChildPath 'hardening.csv')  
+
+# Run hardeningkitty in hailmary mode to harden the Windows computer
+Invoke-HardeningKitty -EmojiSupport -Mode HailMary -Log -Report -FileFindingList hardening.csv
