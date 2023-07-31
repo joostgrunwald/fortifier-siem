@@ -1,5 +1,7 @@
-$globalip = "77.167.67.119"
-Invoke-WebRequest -Uri https://packages.wazuh.com/4.x/windows/wazuh-agent-4.4.5-1.msi -OutFile ${env:tmp}\wazuh-agent.msi; msiexec.exe /i ${env:tmp}\wazuh-agent.msi /q WAZUH_MANAGER=$globalip WAZUH_REGISTRATION_SERVER='192.168.2.7' WAZUH_REGISTRATION_PASSWORD='nuwelijnsiemagent' WAZUH_AGENT_GROUP='Windows' 
+$globalip = ""
+Invoke-WebRequest -Uri https://packages.wazuh.com/4.x/windows/wazuh-agent-4.4.5-1.msi -OutFile ${env:tmp}\wazuh-agent.msi
+Start-Sleep -s 10
+msiexec.exe /i ${env:tmp}\wazuh-agent.msi /q WAZUH_MANAGER=$globalip WAZUH_REGISTRATION_SERVER=$globalip WAZUH_REGISTRATION_PASSWORD='' WAZUH_AGENT_GROUP='Windows' 
 $sysinternals_repo = 'download.sysinternals.com'
 $sysinternals_downloadlink = 'https://download.sysinternals.com/files/SysinternalsSuite.zip'
 $sysinternals_folder = 'C:\Program Files\sysinternals'
@@ -73,13 +75,16 @@ New-Item -ItemType Directory -Path $folderPath | Out-Null
 # Download the specified version of Git for Windows
 $downloadLink = "https://github.com/git-for-windows/git/releases/download/v2.40.0.windows.1/Git-2.40.0-64-bit.exe"
 $gitInstaller = "git-latest-windows.exe"
-Invoke-WebRequest -Uri $downloadLink -OutFile $gitInstaller
+Invoke-WebRequest -Uri $downloadLink -OutFile ${env:tmp}\$gitInstaller
+
+# wait for a few seconds
+Start-Sleep -s 30
 
 # Install Git
-Start-Process -FilePath $gitInstaller -ArgumentList "/VERYSILENT", "/NORESTART", "/LOG=git_install.log" -NoNewWindow -Wait
+Start-Process -FilePath ${env:tmp}\$gitInstaller -ArgumentList "/VERYSILENT", "/NORESTART", "/LOG=git_install.log" -NoNewWindow -Wait
 
 # Remove the installer
-Remove-Item -Path $gitInstaller
+Remove-Item -Path ${env:tmp}\$gitInstaller
 
 # Add Git to the system PATH
 $gitBinPath = "${env:ProgramFiles}\Git\cmd"
@@ -214,6 +219,15 @@ New-Item -ItemType Directory -Path $ossecPath | Out-Null
 }
 Set-Content -Path $chainsawPs1 -Value $fullscript
 
+# Now set remote scans to true
+$path = "C:\Program Files (x86)\ossec-agent\local_internal_options.conf"  
+  
+$content = Get-Content $path  
+$content += "wazuh_command.remote_commands=1"  
+  
+Set-Content $path $content
+
+
 # STEP 5: install the latest release of hardeningkitty
 Function InstallHardeningKitty() {
     $Version = ((Invoke-WebRequest "https://api.github.com/repos/0x6d69636b/windows_hardening/releases/latest" -UseBasicParsing) | ConvertFrom-Json).Name
@@ -227,6 +241,7 @@ Function InstallHardeningKitty() {
     New-Item -Path $Env:ProgramFiles\WindowsPowerShell\Modules\HardeningKitty\$Version -ItemType Directory
     Set-Location .\HardeningKitty$Version
     Copy-Item -Path .\HardeningKitty.psd1,.\HardeningKitty.psm1,.\lists\ -Destination $Env:ProgramFiles\WindowsPowerShell\Modules\HardeningKitty\$Version\ -Recurse
+    Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force
     Import-Module "$Env:ProgramFiles\WindowsPowerShell\Modules\HardeningKitty\$Version\HardeningKitty.psm1"
 }
 InstallHardeningKitty
@@ -240,4 +255,4 @@ $URL = 'https://raw.githubusercontent.com/joostgrunwald/fortifier-siem/main/hard
 Invoke-WebRequest -Uri $URL -OutFile (Join-Path -Path "$Env:ProgramFiles\WindowsPowerShell\Modules\HardeningKitty\$Version\" -ChildPath 'hardening.csv')  
 
 # Run hardeningkitty in hailmary mode to harden the Windows computer
-Invoke-HardeningKitty -EmojiSupport -Mode HailMary -Log -Report -FileFindingList hardening.csv
+Invoke-HardeningKitty -EmojiSupport -Mode HailMary -Log -Report -FileFindingList (Join-Path -Path "$Env:ProgramFiles\WindowsPowerShell\Modules\HardeningKitty\$Version\" -ChildPath 'hardening.csv')
