@@ -6,6 +6,7 @@ ID,Category,Name,Method,MethodArgument,RegistryPath,RegistryItem,ClassName,Names
 1103,"Account Policies","Store passwords using reversible encryption",secedit,"System Access\ClearTextPassword",,,,,,0,0,=,High
 1309,"Security Options","Network access: Do not allow anonymous enumeration of SAM accounts",Registry,,HKLM:\System\CurrentControlSet\Control\Lsa,RestrictAnonymousSAM,,,,1,1,=,Medium
 1325,"Security Options","Network access: Restrict clients allowed to make remote calls to SAM",Registry,,HKLM:\System\CurrentControlSet\Control\Lsa,RestrictRemoteSAM,,,,,O:BAG:BAD:(A;;RC;;;BA),=,Medium
+1326,"Security Options","Network security: Do not store LAN Manager hash value on next password change",Registry,,HKLM:\System\CurrentControlSet\Control\Lsa,NoLMHash,,,,1,1,=,High
 1403,"Windows Firewall","Log size limit (Domain Profile, Policy)",Registry,,HKLM:\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile\Logging,LogFileSize,,,,16384,16384,>=,Medium
 1404,"Windows Firewall","Log dropped packets (Domain Profile, Policy)",Registry,,HKLM:\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile\Logging,LogDroppedPackets,,,,1,1,=,Medium
 1405,"Windows Firewall","Log successful connections (Domain Profile, Policy)",Registry,,HKLM:\SOFTWARE\Policies\Microsoft\WindowsFirewall\DomainProfile\Logging,LogSuccessfulConnections,,,,1,1,=,Low
@@ -176,6 +177,10 @@ ID,Category,Name,Method,MethodArgument,RegistryPath,RegistryItem,ClassName,Names
 2000,"Administrative Templates: Windows Components","File Explorer: Configure Windows Defender SmartScreen",Registry,,HKLM:\SOFTWARE\Policies\Microsoft\Windows\System,EnableSmartScreen,,,,1,1,=,Medium
 2100,PowerShell,"Turn on PowerShell Script Block Logging",Registry,,HKLM:\Software\Policies\Microsoft\Windows\PowerShell\ScriptBlockLogging,EnableScriptBlockLogging,,,,0,1,=,Medium
 2101,PowerShell,"Turn on PowerShell Script Block Logging (Invocation)",Registry,,HKLM:\Software\Policies\Microsoft\Windows\PowerShell\ScriptBlockLogging,EnableScriptBlockInvocationLogging,,,,0,1,=,Low
+2102,PowerShell,"Turn on PowerShell Transcription",Registry,,HKLM:\Software\Policies\Microsoft\Windows\PowerShell\Transcription,EnableTranscripting,,,,0,1,=,Low
+2103,PowerShell,"Turn on PowerShell Transcription (Location)",Registry,,HKLM:\Software\Policies\Microsoft\Windows\PowerShell\Transcription,OutputDirectory,,,,C:\Users\${env:USERNAME}\Documents\,${env:LOCALAPPDATA},=,Low
+2104,PowerShell,"Disable PowerShell version 2",WindowsOptionalFeature,MicrosoftWindowsPowerShellV2,,,,,,Enabled,Disabled,=,Medium
+2105,PowerShell,"Disable PowerShell version 2 (root)",WindowsOptionalFeature,MicrosoftWindowsPowerShellV2Root,,,,,,Enabled,Disabled,=,Medium
 2200,"MS Security Guide","LSA Protection",Registry,,HKLM:\SYSTEM\CurrentControlSet\Control\Lsa,RunAsPPL,,,,,1,=,Medium
 2201,"MS Security Guide","Lsass.exe audit mode",Registry,,"HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\LSASS.exe",AuditLevel,,,,,8,=,Low
 2202,"MS Security Guide","NetBT NodeType configuration",Registry,,HKLM:\SYSTEM\CurrentControlSet\Services\NetBT\Parameters,NodeType,,,,0,2,=,Medium
