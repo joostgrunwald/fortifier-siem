@@ -213,7 +213,7 @@ ID,Category,Name,Method,MethodArgument,RegistryPath,RegistryItem,ClassName,Names
 4312,"Administrative Templates: PowerShellCore","Turn on PowerShell Script Block Logging (PowerShell Policy)",Registry,,HKCU:\Software\Policies\Microsoft\PowerShellCore\ScriptBlockLogging,UseWindowsPowerShellPolicySetting,,,,0,1,=,Medium
 4313,"Administrative Templates: PowerShellCore","Turn on PowerShell Transcription",Registry,,HKCU:\Software\Policies\Microsoft\PowerShellCore\Transcription,EnableTranscripting,,,,0,1,=,Medium
 4314,"Administrative Templates: PowerShellCore","Turn on PowerShell Transcription (Invocation)",Registry,,HKCU:\Software\Policies\Microsoft\PowerShellCore\Transcription,EnableInvocationHeader,,,,0,1,=,Medium
-4315,"Administrative Templates: PowerShellCore","Turn on PowerShell Transcription (PowerShell 
+4315,"Administrative Templates: PowerShellCore","Turn on PowerShell Transcription (PowerShell Policy)",Registry,,HKCU:\Software\Policies\Microsoft\PowerShellCore\Transcription,UseWindowsPowerShellPolicySetting,,,,0,1,=,Medium
 4411,"Office 2016 / Office 365","Microsoft PowerPoint: Block macros from running in Office files from the Internet",Registry,,HKCU:\Software\Policies\Microsoft\Office\16.0\PowerPoint\Security,blockcontentexecutionfrominternet,,,,0,1,=,Medium
 4412,"Office 2016 / Office 365","Microsoft PowerPoint: VBA Macro Notification Settings (Policy)",Registry,,HKCU:\Software\Policies\Microsoft\Office\16.0\PowerPoint\Security,vbawarnings,,,,2,4,=,Medium
 4415,"Office 2016 / Office 365","Microsoft Word: Block macros from running in Office files from the Internet",Registry,,HKCU:\Software\Policies\Microsoft\Office\16.0\Word\Security,blockcontentexecutionfrominternet,,,,0,1,=,Medium
