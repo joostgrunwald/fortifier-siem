@@ -1,5 +1,8 @@
 ID,Category,Name,Method,MethodArgument,RegistryPath,RegistryItem,ClassName,Namespace,Property,DefaultValue,RecommendedValue,Operator,Severity
 1000,Features,"SMBv1 Support",WindowsOptionalFeature,smb1protocol,,,,,,Disabled,Disabled,=,High
+1001,"Microsoft Edge","Enable site isolation for every site",Registry,,HKLM:\Software\Policies\Microsoft\Edge,SitePerProcess,,,,0,1,=,Low
+1008,"Microsoft Edge","Configure Microsoft Defender SmartScreen",Registry,,HKLM:\Software\Policies\Microsoft\Edge,SmartScreenEnabled,,,,0,1,=,Low
+1009,"Microsoft Edge","Configure Microsoft Defender SmartScreen to block potentially unwanted apps",Registry,,HKLM:\Software\Policies\Microsoft\Edge,SmartScreenPuaEnabled,,,,0,1,=,Low
 1100,"Account Policies","Account lockout threshold",accountpolicy,,,,,,,Never,10,<=,Low
 1101,"Account Policies","Account lockout duration",accountpolicy,,,,,,,30,15,>=,Low
 1102,"Account Policies","Reset account lockout counter",accountpolicy,,,,,,,30,15,>=,Low
