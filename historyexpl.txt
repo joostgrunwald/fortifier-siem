@@ -1,0 +1,14 @@
+Open PowerShell as an administrator by searching for PowerShell in the Start menu, right-clicking on it, and selecting "Run as administrator".
+Run the following command to create a new scheduled task that runs the script every week:
+$Action = New-ScheduledTaskAction -Execute "powershell.exe" -Argument "-ExecutionPolicy Bypass -File 'C:\path\to\FakeHistory.ps1'"  
+$Trigger = New-ScheduledTaskTrigger -Weekly -DaysOfWeek (Get-Random -InputObject @("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")) -At 9am  
+$Settings = New-ScheduledTaskSettingsSet -DontStopOnIdleEnd -DontStopIfGoingOnBatteries -StartWhenAvailable  
+$Principal = New-ScheduledTaskPrincipal -UserId "NT AUTHORITY\SYSTEM" -LogonType ServiceAccount -RunLevel Highest  
+$Task = New-ScheduledTask -Action $Action -Trigger $Trigger -Settings $Settings -Principal $Principal  
+Register-ScheduledTask -TaskName "FakeHistory" -InputObject $Task  
+ 
+Replace 'C:\path\to\FakeHistory.ps1' with the full path to the FakeHistory.ps1 script on your computer.
+
+This command creates a new scheduled task named "FakeHistory" that runs the script every week at 9 AM on a randomly chosen day of the week. The task runs with the highest privileges using the SYSTEM account, and it will start as soon as possible if the trigger is missed (e.g., the computer is turned off).
+
+You can view and manage the task using the Task Scheduler. Search for "Task Scheduler" in the Start menu, open it, and navigate to "Task Scheduler Library" to find the "FakeHistory" task.
