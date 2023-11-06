@@ -3,18 +3,6 @@
         "description": "High severity SIEM alert: Microsoft Defender Antivirus has detected malware or potentially unwanted software (HackTool:PowerShell/Mimikatz.F) on the local computer.",
         "ip": "192.168.68.117",
         "action": "isolatenetwork,blockuser",
-        "baduser": "ICT Beheer"
-    },
-    {
-        "description": "High severity SIEM alert: Microsoft Defender Antivirus detected malware (HackTool:PowerShell/Mimikatz.F) on host NUW-BEST-16. The malware is categorized as a high risk and is located in the user's AppData folder.",
-        "ip": "192.168.68.117",
-        "action": "isolatenetwork, blockuser",
-        "baduser": "ICT Beheer"
-    },
-    {
-        "description": "High severity SIEM alert: Microsoft Defender Antivirus has detected malware or other potentially unwanted software (HackTool:PowerShell/Mimikatz.F) on the local computer. The malware was found in the PowerShell scripts of the user ICT Beheer.",
-        "ip": "192.168.68.117",
-        "action": "isolatenetwork,blockuser",
-        "baduser": "ICT Beheer"
+        "baduser": "testuser22"
     }
 ]
