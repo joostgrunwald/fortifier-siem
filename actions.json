@@ -25,5 +25,11 @@
         "action": "isolatenetwork",
         "badip": "",
         "baduser": ""
+    },
+    {
+        "description": "High severity SIEM alert: Windows Defender detected malware (PUA:Win32/Creprote) on a local computer. The malware was detected in real-time and has a high severity rating.",
+        "ip": "192.168.2.77",
+        "action": "isolatenetwork, banbadip",
+        "badip": "192.168.2.77"
     }
 ]
