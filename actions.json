@@ -1,1 +1,9 @@
- 
+[
+    {
+        "description": "A Trojan:Win32/Occamy.CEA malware has been detected on the system. This is a high severity threat, and immediate action is required.",
+        "ip": "192.168.2.77",
+        "action": "isolatenetwork, banbadip",
+        "badip": "192.168.2.77",
+        "baduser": "NT AUTHORITY\\SYSTEM"
+    }
+]
