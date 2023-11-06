@@ -18,5 +18,12 @@
         "ip": "192.168.2.77",
         "action": "isolatenetwork",
         "baduser": "NT AUTHORITY\\SYSTEM"
+    },
+    {
+        "description": "Windows Defender detected malware or potentially unwanted software (PUA:Win32/Creprote) on the system. The event occurred on the local computer and was detected by real-time protection. The affected files are located in the C:\\metasploit folder.",
+        "ip": "192.168.2.77",
+        "action": "isolatenetwork",
+        "badip": "",
+        "baduser": ""
     }
 ]
