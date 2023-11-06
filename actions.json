@@ -4,5 +4,11 @@
         "ip": "192.168.68.117",
         "action": "isolatenetwork,blockuser",
         "baduser": "testuser22"
+    },
+    {
+        "description": "Microsoft Defender Antivirus detected malware (HackTool:PowerShell/Mimikatz) on the host NUW-BEST-16, potentially compromising the system and user testuser33. This poses a high risk to the network.",
+        "ip": "192.168.68.117",
+        "action": "isolatenetwork, blockuser",
+        "baduser": "testuser33"
     }
 ]
