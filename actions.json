@@ -31,5 +31,11 @@
         "ip": "192.168.2.77",
         "action": "isolatenetwork, banbadip",
         "badip": "192.168.2.77"
+    },
+    {
+        "description": "Windows Defender detected malware or potentially unwanted software on the system. The threat is severe and categorized as potentially unwanted software. The detection source is real-time protection.",
+        "ip": "192.168.2.77",
+        "action": "isolatenetwork",
+        "baduser": "NT AUTHORITY\\SYSTEM"
     }
 ]
