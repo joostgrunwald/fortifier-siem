@@ -16,5 +16,11 @@
         "ip": "192.168.68.117",
         "action": "isolatenetwork, blockuser",
         "baduser": "ICT Beheer, testuser22"
+    },
+    {
+        "description": "High severity event: Microsoft Defender Antivirus detected malware (HackTool:PowerShell/Mimikatz) on host NUW-BEST-16. The malicious software was detected in the PowerShell ISE process and may pose a risk to the integrity of the user's account and the network.",
+        "ip": "192.168.68.117",
+        "action": "isolatenetwork, blockuser",
+        "baduser": "NUW-BEST-16\\testuser22"
     }
 ]
