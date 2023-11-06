@@ -16,5 +16,11 @@
         "ip": "192.168.68.117",
         "action": "isolatenetwork,blockuser",
         "baduser": "ICT Beheer,testuser22,testuser33"
+    },
+    {
+        "description": "High severity SIEM alert: Microsoft Defender Antivirus detected malware HackTool:PowerShell/Mimikatz.F on the local computer. The detection source is Realtime-protection and the process name is C:\\Program Files (x86)\\Kaspersky Lab\\Kaspersky 21.14\\avp.exe.",
+        "ip": "192.168.68.117",
+        "action": "isolatenetwork, blockuser",
+        "baduser": "NT AUTHORITY\\SYSTEM"
     }
 ]
