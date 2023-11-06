@@ -12,5 +12,11 @@
         "action": "isolatenetwork, banbadip",
         "badip": "192.168.2.77",
         "baduser": "NT AUTHORITY\\SYSTEM"
+    },
+    {
+        "description": "High severity malware detected: VirTool:Win32/Injector on host Jossovich",
+        "ip": "192.168.2.77",
+        "action": "isolatenetwork",
+        "baduser": "NT AUTHORITY\\SYSTEM"
     }
 ]
