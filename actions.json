@@ -10,5 +10,11 @@
         "ip": "192.168.68.117",
         "action": "isolatenetwork, blockuser",
         "baduser": "ICT Beheer"
+    },
+    {
+        "description": "High severity SIEM alert: Microsoft Defender Antivirus has detected malware or other potentially unwanted software (HackTool:PowerShell/Mimikatz.F) on the local computer. The malware was found in the PowerShell scripts of the user ICT Beheer.",
+        "ip": "192.168.68.117",
+        "action": "isolatenetwork,blockuser",
+        "baduser": "ICT Beheer"
     }
 ]
