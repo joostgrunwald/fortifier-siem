@@ -22,5 +22,11 @@
         "ip": "192.168.68.117",
         "action": "isolatenetwork, blockuser",
         "baduser": "NT AUTHORITY\\SYSTEM"
+    },
+    {
+        "description": "High severity SIEM alert: Microsoft Defender Antivirus detected malware (HackTool:PowerShell/Mimikatz.F) on local computer.",
+        "ip": "192.168.68.117",
+        "action": "isolatenetwork, blockuser",
+        "baduser": "testuser22"
     }
 ]
