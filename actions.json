@@ -1,1 +1,8 @@
- 
+[
+    {
+        "description": "High severity event detected: HackTool:Win32/Mikatz!dha malware found on a local computer. Realtime protection detected the malware in PowerShell and Chrome cache. The malware poses a high risk to the network and user account.",
+        "ip": "192.168.68.117",
+        "action": "isolatenetwork, blockuser",
+        "baduser": "ICT Beheer"
+    }
+]
