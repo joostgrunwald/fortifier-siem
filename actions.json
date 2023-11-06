@@ -28,5 +28,11 @@
         "ip": "192.168.68.117",
         "action": "isolatenetwork, blockuser",
         "baduser": "testuser22"
+    },
+    {
+        "description": "Microsoft Defender Antivirus has detected malware or other potentially unwanted software (HackTool:PowerShell/Mimikatz) on the system. The severity is high, and the affected user is testuser33.",
+        "ip": "192.168.68.117",
+        "action": "isolatenetwork, blockuser",
+        "baduser": "testuser33"
     }
 ]
