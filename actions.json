@@ -5,5 +5,12 @@
         "action": "isolatenetwork, banbadip",
         "badip": "192.168.2.77",
         "baduser": "NT AUTHORITY\\SYSTEM"
+    },
+    {
+        "description": "A high severity event has been detected. Windows Defender has identified a Trojan:Win32/Injector on the system. This malware poses a serious threat to the network and may lead to data theft, unauthorized access, and other malicious activities.",
+        "ip": "192.168.2.77",
+        "action": "isolatenetwork, banbadip",
+        "badip": "192.168.2.77",
+        "baduser": "NT AUTHORITY\\SYSTEM"
     }
 ]
