@@ -37,5 +37,12 @@
         "ip": "192.168.2.77",
         "action": "isolatenetwork",
         "baduser": "NT AUTHORITY\\SYSTEM"
+    },
+    {
+        "description": "High severity SIEM alert. Windows Defender detected malware or other potentially unwanted software on host Jossovich. Name: PUA:Win32/Creprote. Severity: Serious. Category: Potentially unwanted software. Detection source: Real-time protection.",
+        "ip": "192.168.2.77",
+        "action": "isolatenetwork",
+        "badip": "",
+        "baduser": ""
     }
 ]
