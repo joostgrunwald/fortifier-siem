@@ -1,0 +1,5 @@
+https://blog.filigran.io/new-octi-dashboards-the-first-graph-dashboarding-engine-for-the-stix-model-406e4eb5842a
+https://medium.com/@CloudifyOps/building-a-comprehensive-security-dashboard-on-grafana-unleashing-the-power-of-falco-kubebench-7af5393a32ed
+https://grafana.com/grafana/plugins/netsage-sankey-panel/
+https://socfortress.medium.com/your-open-source-incident-response-platform-e9d839f02454
+https://socfortress.medium.com/maximizing-threat-detection-and-response-with-cortex-63e7b653c2cb
