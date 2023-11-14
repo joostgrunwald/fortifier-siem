@@ -1,7 +1,7 @@
 [
     {
         "description": "High severity alert: HackTool:PowerShell/Mimikatz detected on host NUW-BEST-16, which indicates potential unauthorized access to user credentials and system information.",
-        "ip": "172.26.240.1",
+        "ip": "172.20.10.9",
         "action": "isolatenetwork, blockuser",
         "baduser": "testuser22"
     }
