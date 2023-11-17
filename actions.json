@@ -1,1 +1,8 @@
- 
+[
+    {
+        "description": "High severity SIEM alert: Trojan:PowerShell/PSAttackTool.A detected on host NUW-BEST-16 by Microsoft Defender Antivirus. The malware poses a serious threat to the network and user data.",
+        "ip": "172.29.12.47",
+        "action": "isolatenetwork, blockuser",
+        "baduser": "NUW-BEST-16\\testuser22"
+    }
+]
