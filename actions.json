@@ -1,11 +1,5 @@
 [
     {
-        "description": "High severity alert: HackTool:PowerShell/Mimikatz detected on host NUW-BEST-16, which indicates potential unauthorized access to user credentials and system information.",
-        "ip": "10.150.62.45",
-        "action": "isolatenetwork, blockuser",
-        "baduser": "testuser22"
-    },
-    {
         "description": "Microsoft Defender Antivirus detected malware (Trojan:PowerShell/PSAttackTool.A) on the host NUW-BEST-16. The malware was found in the powershell_ise.exe process, which is running under the user 'testuser22'. The severity of this threat is high, and immediate action is required.",
         "ip": "192.168.68.117",
         "action": "isolatenetwork,blockuser",
