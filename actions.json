@@ -1,1 +1,8 @@
-
+[
+    {
+        "description": "A high severity event has occurred. Trojan:PowerShell/PSAttackTool.A malware has been detected on the system by Microsoft Defender Antivirus. The infected user is AzureAD\\JoostGrunwald and the affected system is NUW-BEST-16.",
+        "ip": "192.168.68.117",
+        "action": "isolatenetwork, blockuser",
+        "baduser": "AzureAD\\JoostGrunwald"
+    }
+]
