@@ -1,8 +1,1 @@
-[
-    {
-        "description": "A high severity alert has been triggered due to the detection of malware (Trojan:PowerShell/PSAttackTool.A) on the system. The detected malware is a trojan horse, which can compromise user data and system security.",
-        "ip": "192.168.68.117",
-        "action": "isolatenetwork, blockuser",
-        "baduser": "NUW-BEST-16\\testuser22"
-    }
-]
+
