@@ -4,5 +4,11 @@
         "ip": "192.168.2.77",
         "action": "isolatenetwork, blockuser",
         "baduser": "NT AUTHORITY\\SYSTEM"
+    },
+    {
+        "description": "High severity SIEM alert: Windows Defender detected malware HackTool:Win64/Meterpreter.A!dll on computer Jossovich. The malware is located in the metasploit directory and was detected by real-time protection.",
+        "ip": "192.168.2.77",
+        "action": "isolatenetwork,blockuser",
+        "baduser": "NT AUTHORITY\\SYSTEM"
     }
 ]
