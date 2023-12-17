@@ -10,5 +10,12 @@
         "ip": "192.168.2.77",
         "action": "isolatenetwork,blockuser",
         "baduser": "NT AUTHORITY\\SYSTEM"
+    },
+    {
+        "description": "High severity SIEM alert: Windows Defender detected malware (HackTool:Win32/Meterpreter!MSR) on the local computer. The detection source is Real-time protection. The user is NT AUTHORITY\\SYSTEM and the process name is C:\\Program Files (x86)\\Kaspersky Lab\\Kaspersky 21.15\\avp.exe.",
+        "ip": "192.168.2.77",
+        "action": "isolatenetwork,banbadip",
+        "badip": "192.168.2.77",
+        "baduser": "NT AUTHORITY\\SYSTEM"
     }
 ]
