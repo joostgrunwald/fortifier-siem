@@ -101,3 +101,30 @@ Set-DnsClientServerAddress -InterfaceIndex $adapter.ifIndex -ServerAddresses $dn
   
 # Display the updated DNS settings  
 Get-DnsClientServerAddress -InterfaceIndex $adapter.ifIndex | Select-Object -ExpandProperty ServerAddresses  
+
+
+# Zeeluwe 1: Remove all admin rights from localadmins
+# Get the local Administrators group
+$administratorsGroup = [ADSI]"WinNT://./Administrators,group"
+
+# Enumerate all members of the Administrators group
+$adminMembers = @($administratorsGroup.psbase.Invoke("Members"))
+$adminMembers | ForEach-Object {
+    # Get the path of the current member and translate it to the NTAccount format
+    $memberPath = $_.GetType().InvokeMember("ADspath", 'GetProperty', $null, $_, $null)
+    $memberName = (New-Object System.Security.Principal.NTAccount($memberPath.Replace("WinNT://", "").Replace("/", "\"))).Value
+
+    # Check if the current member is a local user account (and not a domain account or built-in account)
+    if ($memberName -notmatch '\\') {
+        try {
+            # Remove the user account from the Administrators group
+            $administratorsGroup.psbase.Invoke("Remove", $_.psbase.Path)
+            Write-Host "Removed user $memberName from the Administrators group."
+        } catch {
+            Write-Error "Failed to remove user $memberName from the Administrators group. Error: $_"
+        }
+    }
+}
+
+
+# Zeeluwe NWV 2: Make it so that local users can not log in.
