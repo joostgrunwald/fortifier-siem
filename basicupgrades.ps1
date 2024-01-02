@@ -127,4 +127,17 @@ $adminMembers | ForEach-Object {
 }
 
 
-# Zeeluwe NWV 2: Make it so that local users can not log in.
+# Zeeluwe 2: Make it so that local users can not log in.
+# Get all local user accounts except the built-in Administrator account
+$localUsers = Get-LocalUser | Where-Object { $_.Name -ne "Administrator" -and $_.PrincipalSource -eq "Local" }
+
+foreach ($user in $localUsers) {
+    # Disable each local user account
+    try {
+        Disable-LocalUser -Name $user.Name
+        Write-Host "User account $($user.Name) has been disabled."
+    } catch {
+        Write-Error "Failed to disable user account $($user.Name). Error: $_"
+    }
+}
+
