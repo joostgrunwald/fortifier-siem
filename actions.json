@@ -1,8 +1,1 @@
-[
-    {
-        "description": "High severity alert: Microsoft Defender Antivirus detected malware (HackTool:Win32/Mikatz!dha) on a user's system. The user downloaded the malicious file from the internet.",
-        "ip": "192.168.68.116",
-        "action": "isolatenetwork, blockuser",
-        "baduser": "NUW-BEST-16\\testuser22"
-    }
-]
+ 
