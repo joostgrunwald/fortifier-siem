@@ -1,1 +1,8 @@
- 
+[
+    {
+        "description": "Microsoft Defender Antivirus detected malware or other potentially unwanted software named HackTool:Win32/Mikatz!dha with high severity on the local computer. The user testuser22 was running a suspicious process named thor64.exe when the detection occurred.",
+        "ip": "192.168.68.116",
+        "action": "isolatenetwork, blockuser",
+        "baduser": "testuser22"
+    }
+]
