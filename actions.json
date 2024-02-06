@@ -1,1 +1,8 @@
- 
+[
+    {
+        "description": "Microsoft Defender Antivirus detected malware (Trojan:PowerShell/PSAttackTool.A) on NUW-BEST-16, which poses a severe threat to the network. The malware was detected in the WindowsPowerShell folder and was executed by user testuser22.",
+        "ip": "172.20.10.9",
+        "action": "isolatenetwork, blockuser",
+        "baduser": "testuser22"
+    }
+]
