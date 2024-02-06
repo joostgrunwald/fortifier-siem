@@ -1,1 +1,8 @@
- 
+[
+    {
+        "description": "A high severity Trojan:PowerShell/PSAttackTool.A has been detected on the system. This malware poses a serious threat to the network and the affected user.",
+        "ip": "172.20.10.9",
+        "action": "isolatenetwork, blockuser",
+        "baduser": "NUW-BEST-16\\testuser22"
+    }
+]
