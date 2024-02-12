@@ -4,5 +4,11 @@
         "ip": "172.20.10.9",
         "action": "isolatenetwork, blockuser",
         "baduser": "testuser22"
+    },
+    {
+        "description": "Microsoft Defender Antivirus has detected malware or other potentially unwanted software. Severe threat detected: Tool:Win32/EICAR_Test_File with ID 17463. Detection origin: Local machine, Detection type: Concrete, Detection source: Real-Time Protection.",
+        "ip": "FE80:0000:0000:0000:A01A:95F9:0F45:61D4",
+        "action": "isolatenetwork",
+        "baduser": "joost"
     }
 ]
