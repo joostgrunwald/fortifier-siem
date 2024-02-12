@@ -10,5 +10,11 @@
         "ip": "FE80:0000:0000:0000:A01A:95F9:0F45:61D4",
         "action": "isolatenetwork",
         "baduser": "joost"
+    },
+    {
+        "description": "Microsoft Defender Antivirus has detected a severe virus (Virus:Win32/MpTest!amsi) on the local machine. The malware was found in the path: C:\\Users\\joost\\Downloads\\ThreatCheck-master\\ThreatCheck\\ThreatCheck\\Amsi\\AmsiInstance.cs.",
+        "ip": "FE80:0000:0000:0000:A01A:95F9:0F45:61D4",
+        "action": "isolatenetwork,blockuser",
+        "baduser": "NT AUTHORITY\\SYSTEM"
     }
 ]
