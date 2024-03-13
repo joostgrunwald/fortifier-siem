@@ -49,5 +49,11 @@
         "ip": "FE80:0000:0000:0000:A01A:95F9:0F45:61D4",
         "action": "isolatenetwork, blockuser",
         "baduser": "joost"
+    },
+    {
+        "description": "High severity SIEM alert: Windows Defender detected potentially unwanted software (Virus:Win32/MpTest!amsi) on the user's computer.",
+        "ip": "FE80:0000:0000:0000:A01A:95F9:0F45:61D4",
+        "action": "isolatenetwork,blockuser",
+        "baduser": "joost"
     }
 ]
