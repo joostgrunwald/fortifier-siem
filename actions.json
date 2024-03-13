@@ -4,5 +4,12 @@
         "ip": "192.168.68.119",
         "action": "isolatenetwork, blockuser",
         "baduser": "testuser22"
+    },
+    {
+        "description": "High severity SIEM alert - Windows Defender detected potentially unwanted software Trojan:PowerShell/PSAttackTool.A on the system.",
+        "ip": "192.168.68.119",
+        "action": "isolatenetwork, blockuser",
+        "badip": "",
+        "baduser": "testuser22"
     }
 ]
