@@ -25,5 +25,11 @@
         "action": "banbadip, isolatenetwork, blockuser",
         "badip": "192.168.68.119",
         "baduser": "testuser22"
+    },
+    {
+        "description": "High severity SIEM alert: Windows Defender detected potentially unwanted software Trojan:PowerShell/PSAttackTool.A on host NUW-BEST-16.",
+        "ip": "192.168.68.119",
+        "action": "isolatenetwork, blockuser",
+        "baduser": "testuser22"
     }
 ]
