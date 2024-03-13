@@ -1,1 +1,8 @@
-
+[
+    {
+        "description": "A high severity event has been detected. Microsoft Defender Antivirus found a Trojan:PowerShell/PSAttackTool.A on the system, which is a dangerous malware posing a severe threat to the network.",
+        "ip": "192.168.68.119",
+        "action": "isolatenetwork, blockuser",
+        "baduser": "NUW-BEST-16\\testuser22"
+    }
+]
