@@ -37,5 +37,11 @@
         "ip": "192.168.68.119",
         "action": "isolatenetwork, blockuser",
         "baduser": "testuser22"
+    },
+    {
+        "description": "Windows Defender detected potentially unwanted software, Trojan:PowerShell/PSAttackTool.A, which is a high severity threat. This trojan horse was found in the Windows PowerShell process on the host NUW-BEST-16.",
+        "ip": "192.168.68.119",
+        "action": "isolatenetwork, blockuser",
+        "baduser": "testuser22"
     }
 ]
