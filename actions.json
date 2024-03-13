@@ -43,5 +43,11 @@
         "ip": "192.168.68.119",
         "action": "isolatenetwork, blockuser",
         "baduser": "testuser22"
+    },
+    {
+        "description": "Windows Defender detected potentially unwanted software (Tool:Win32/EICAR_Test_File) on DESKTOP-KD1JDIK with severity level 12. The detection source is Real-Time Protection and the affected file paths include multiple instances of eicar.com and other related files.",
+        "ip": "FE80:0000:0000:0000:A01A:95F9:0F45:61D4",
+        "action": "isolatenetwork, blockuser",
+        "baduser": "joost"
     }
 ]
