@@ -18,5 +18,12 @@
         "action": "isolatenetwork,blockuser",
         "badip": "",
         "baduser": "testuser22"
+    },
+    {
+        "description": "High severity SIEM alert: Windows Defender detected a potentially unwanted software (Trojan:PowerShell/PSAttackTool.A) on host NUW-BEST-16. This is a serious threat, as it is a trojan horse that can compromise the system and user.",
+        "ip": "192.168.68.119",
+        "action": "banbadip, isolatenetwork, blockuser",
+        "badip": "192.168.68.119",
+        "baduser": "testuser22"
     }
 ]
