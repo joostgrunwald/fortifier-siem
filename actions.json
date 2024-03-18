@@ -1,1 +1,8 @@
-
+[
+    {
+        "description": "High severity SIEM alert: Windows Defender detected Trojan:PowerShell/PSAttackTool.A, a potentially unwanted software on host NUW-BEST-16. The malware was detected in the process powershell_ise.exe, executed by user testuser22. This poses a serious security risk to the network.",
+        "ip": "192.168.68.119",
+        "action": "isolatenetwork, blockuser",
+        "baduser": "testuser22"
+    }
+]
